@@ -1,0 +1,60 @@
+---
+title: "HMK 5: Reading and tidying data"
+format: gfm
+editor: visual
+---
+
+# Reading
+
+-   [R4DS Chapters 5-](https://r4ds.hadley.nz/data-import)7
+
+# Introduction
+
+R code to be submitted as part of this assignment can be submitted as either an R script (i.e. a .R file) or a quarto (.qmd) file - whichever you prefer. This means creating your own file, e.g. student_name_hmk5.R or student_name_hmk5.qmd. In this assignment, because we will be reading in data files, we have to be strict about the file structure. The project directory has the following structure
+
+```{=plain}
+/src
+/data
+micr_rda_c5_7.Rproj
+README.md
+```
+please make sure that your homework assignment (R script or quarto doc) is saved in the /src folder
+
+# Data import
+
+## Q1:
+
+-   Use `read_csv()` to read the file 'sample_data.csv' to an R data frame. Follow the instructions in Ch 7 to format it properly. Make sure the following are true:
+    -   Column names should be *syntactic*, meaning they don't contain spaces.
+    -   N/A values should be represented with the R value `NA`, not the character "N/A".
+    -   Data types (character vs factor vs numeric) should be appropriate.
+
+# Tidying
+
+First, open colloquium_assessment.csv file with Microsoft Excel or a text reading app, to get a sense of the structure of the document. This is a real data set: it is the output from the evaluation forms for student colloquium speakers in the Microbiology department. A few columns have been eliminated and some of the responses were edited to protect student privacy, but the structure of the data is real. Why is the file formatted so inconveniently? I have no idea, but I do know that this is about an average level of inconvenient formatting for real data sets you will find in the wild.
+
+Now import the file colloquium_assessment.csv into an R dataframe. This is a real data set: it is the output from the evaluation forms for student colloquium speakers in the Microbiology department. A few columns have been eliminated and some of the responses were edited to protect student privacy, but the structure of the data is real.
+
+## Q2
+
+Next, use `read_csv()` to import the file colloquium_assessment.csv into an R dataframe. Note that you'll need to make use of some of the optional arguments. Use `?read_csv` to see what they are.
+
+As we discussed in class, the correct shape depends on what you want to do with the data. Use `pivot_longer()` to make the data frame longer, in a way that makes sense.
+
+## Q3
+
+Finally, calculate this student's average score for each of questions 7-10.
+
+## Q4
+
+Peer review. Prior to submission, please send your github link to your group project members, have them clone it to their computers, e.g. via:
+
+git clone [https://github.com/username/micr_rda_c5_7/](https://github.com/dtalmy/Spoon-Knife)
+
+cd into the repository and run your code (i..e your .R or a .qmd file). Verify that the code works. Next have them add a comment to your README.md file on the github website to verify that they have run your code, and importantly, giving any suggestions for how to improve your code. Note that, for them to comment in your repository, you will need to add them as a collaborator. Instructions for how to do that are here:
+
+<https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository>
+
+## Submission
+
+Please submit a link to your forked repository to Canvas.
